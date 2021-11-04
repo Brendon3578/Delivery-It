@@ -31,7 +31,7 @@
 
 O Delivery.it é um pequeno projeto para a gestão de entregas de encomendas, com a inserção do endereço e da data da entrega
 
-- [Acesse o projeto](link)
+- [Acesse o projeto](https://delivery-it.herokuapp.com/)
 
 ## 🛠 Tecnologias
 
