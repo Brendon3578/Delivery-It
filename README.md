@@ -19,7 +19,7 @@
     </kbd>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <kbd>
-        <img src=".github/cover-2.png" width='200' style="border-radius: 5px" alt="Mobile page">
+        <img src=".github/cover-2.PNG" width='200' style="border-radius: 5px" alt="Mobile page">
     </kbd>
 </p>
 
