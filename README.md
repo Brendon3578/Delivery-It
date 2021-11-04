@@ -57,7 +57,7 @@ Utilitários
 ```bash
 
     # Clonar o repositório
-    $ git clone https://github.com/Brendon3578/Delivery
+    $ git clone https://github.com/Brendon3578/Delivery-It
 
     # Entrar no diretório
     $ cd Letmeask
