@@ -1,46 +1,95 @@
-# Getting Started with Create React App
+# 📦 Delivery.it
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+    <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#-como-executar">Como executar</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#-projeto">Projeto</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#-layout">Layout</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#-features-extras">Features extras</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#-licença">Licença</a>
+</p>
 
-## Available Scripts
+<p align="center">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
+</p>
 
-In the project directory, you can run:
+<p align="center">
+    <kbd>
+        <img src=".github/cover.png" width="550" style="border-radius: 5px" alt="Desktop page">
+    </kbd>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <kbd>
+        <img src=".github/cover-2.png" width='200' style="border-radius: 5px" alt="Mobile page">
+    </kbd>
+</p>
 
-### `yarn start`
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 💻 Projeto
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+O Delivery.it é um pequeno projeto para a gestão de entregas de encomendas, com a inserção do endereço e da data da entrega
 
-### `yarn test`
+- [Acesse o projeto](link)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Tecnologias
 
-### `yarn build`
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [ReactJS](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Bibliotecas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [React Leaflet](https://react-leaflet.js.org//)
+- [React Select](https://react-select.com/home)
+- [React Datetime](https://github.com/arqex/react-datetime)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Axios](https://github.com/axios/axios)
 
-### `yarn eject`
+Utilitários
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [Google Fonts](https://fonts.google.com/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Como executar
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    # Clonar o repositório
+    $ git clone https://github.com/Brendon3578/Delivery
 
-## Learn More
+    # Entrar no diretório
+    $ cd Letmeask
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    # Instalar as dependências
+    $ yarn install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    # Iniciar o projeto
+    $ yarn start
+
+```
+
+Lembrando que será necessário criar uma conta gratuita no [Mapbox 🗺️](https://www.mapbox.com/) para criar o token de acesso, necessário para se ter acesso à API de Geolocalização.
+
+:arrow_right: Depois de ter uma conta do Mapbox, cole a seguinte variável ambiente em um arquivo .env criado na pasta root do projeto, e insira o token de acesso nesse arquivo:
+
+```bash
+REACT_APP_ACCESS_TOKEN_MAP_BOX='insira_o_access_token_do_mapbox_aqui'
+```
+
+## ☕ Features
+
+- :earth_americas: Seleção assíncrona de Eendereços com a utilização do React-Select
+- :calendar: Manipulação de Datas no react atráves do React-Datetime
+- :world_map: React Leaflet para o inserimento do mapa dentro do React
+
+## 📝 Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
+
+---
+
+<h3 align="center">
+    Feito com ☕ por <a href="https://github.com/Brendon3578"> Brendon Gomes</a>
+</h3>

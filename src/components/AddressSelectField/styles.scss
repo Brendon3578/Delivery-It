@@ -1,0 +1,75 @@
+/* Styles of React Select */
+.address-select__control {
+  border-radius: 20px !important;
+  padding: 8px 0px;
+  width: 100% !important;
+  max-width: 376px !important;
+  background: var(--background-100) !important;
+  border: 1px solid var(--background-200) !important;
+  border-radius: 4px !important;
+  outline: none !important;
+  color: var(--base-color-400) !important;
+
+  cursor: text !important;
+
+  .address-select__indicator-separator {
+    display: none;
+  }
+
+  &.address-select__control--is-focused {
+    box-shadow: 0px 0px 1px 1px var(--base-color-300) !important;
+
+    svg {
+      color: var(--base-color-300) !important;
+
+      &:hover {
+        filter: brightness(0.9);
+      }
+    }
+  }
+  .address-select__input-container {
+    margin: 0px;
+    padding: 0px;
+  }
+  .address-select__value-container {
+    padding: 0px;
+    padding-left: 12px;
+  }
+  .address-select__input {
+    color: var(--text-white-50) !important;
+  }
+  .address-select__placeholder {
+    color: var(--background-10);
+  }
+  .address-select__single-value {
+    color: var(--text-white-100) !important;
+  }
+
+  .search-button {
+    padding: 0px 8px;
+    font-size: 20px;
+    color: var(--text-white-200);
+    display: flex;
+  }
+}
+
+.address-select__menu {
+  background: #1f1f20 !important;
+  box-shadow: 0px 2px 5px #1f1f20 !important;
+  transform: translateY(-7px) !important;
+}
+.address-select__option {
+  background: #1f1f20 !important;
+  color: var(--text-white-100) !important;
+}
+
+.address-select__option--is-focused {
+  background: #292a2b !important;
+  color: var(--text-white-100) !important;
+}
+
+.address-select__no-info {
+  padding: 6px 8px;
+  color: #686868;
+  text-align: center;
+}
