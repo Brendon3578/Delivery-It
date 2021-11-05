@@ -1,4 +1,4 @@
-# 🚚 Delivery.it
+# 📦 Delivery.it
 
 <p align="center">
     <a href="#-projeto">Projeto</a>&nbsp;&nbsp;|&nbsp;&nbsp;
