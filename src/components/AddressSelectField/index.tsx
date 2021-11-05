@@ -14,13 +14,18 @@ type AddressSelectFieldProps = {
   clearAddressEvent: MouseEventHandler;
 }
 
-
 export function AddressSelectField ({
   address, onChangeSelect, clearAddressEvent
 } : AddressSelectFieldProps) {
 
-  const loadOptions = async (inputValue: any, callback: any) => {
-    if (inputValue.length < 5) return;
+  // - Função Assíncrona que será disparada toda vez que o usuário digitar
+  // algum endereço no input. Contém a implementação da busca do local (endereço)
+  // usando a API, retorna em formato de um array as opções para o autocomplete,
+  // o array é enviado pela função de retorno 'callback(places)' que preencherá
+  // as options do select
+  async function loadOptions(inputValue: any, callback: any) {
+    if (inputValue.length < 5)
+      return;
     let places: any = [];
     const response = await api.get(`geocoding/v5/mapbox.places/${inputValue}.json?access_token=${ACCESS_TOKEN_MAP_BOX}`);
 
@@ -31,11 +36,11 @@ export function AddressSelectField ({
         coords: item.center,
         place: item.place_name,
       });
-      return null
+      return null;
     });
-    
+
     callback(places);
-  };
+  }
 
   return (
     <div className="input-block">

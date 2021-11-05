@@ -20,6 +20,7 @@ import illustrationDelivery from './assets/images/illustration-delivery.svg'
 
 // styles and icons import
 import { FiPackage, FiTruck, FiChevronRight } from 'react-icons/fi'
+// - Importar a estilização da biblioteca Leaflet
 import 'leaflet/dist/leaflet.css'
 import './styles/App.scss'
 
@@ -27,6 +28,7 @@ const initialPosition = { lat: -23.5593602, lng: -46.6608744 };
 
 const initialDate = formatDate(new Date().toString())
 
+// - Customização dos marcadores do mapa, para renderizar no mapa
 const mapPackageIcon = Leaflet.icon({
   iconUrl: packageIcon,
   iconSize: [58, 68],
@@ -34,7 +36,7 @@ const mapPackageIcon = Leaflet.icon({
   popupAnchor: [170, 2],
 })
 
-
+// Tipagem do Delivery (Entrega) com seus atributos
 export type DeliveryType = {
   id: string;
   name: string;
@@ -56,12 +58,19 @@ export type AddressType = {
 } | null
 
 export function App() {
+  // - Definiçãao das variaavéis de estado do componente
+
+  // - Array que armazenará todos os dados das entregas
   const [deliveries, setDeliveries] = useState<DeliveryType[]>([]);
 
+  // - Objeto que representa uma coordenada geográfica, utilizado para
+  // mostar o marcador (pin) quando o usuário digitar a sua localização
   const [position, setPosition] = useState<PositionType | null>(null);
 
+  // - Variavél auxiliar para centralizar o mapa assim que o usuário escolhe um endereço
   const [location, setLocation] = useState(initialPosition);
 
+  // - Variavéis que armazenam os dados do formulário.
   const [name, setName] = useState("");
   const [complement, setComplement] = useState("");
   const [address, setAddress] = useState<AddressType>(null);
@@ -71,12 +80,15 @@ export function App() {
 
   const [confirmButtonTitle, setConfirmButtonTitle] = useState('Confirmar')
 
+  // - useEffect utilizado para atualizar os deliveries no local storage
   useEffect(() => {
     if (deliveries.length > 0) {
       localStorage.setItem('@deliveries', JSON.stringify(deliveries))
     }
   }, [deliveries])
 
+  // - useEffect para pegar (se existir) do local storage os deliveries
+  // assim que a aplicação for iniciada
   useEffect(() => {
     const LS_Deliveries = localStorage.getItem('@deliveries')
 
@@ -213,10 +225,14 @@ export function App() {
         </div>
       </div>
 
+      {/* toda as configurações do mapa, está dentro do componente LeafletMap */}
       <LeafletMap
         location={location}
         position={position}
       >
+        {/* A cada elemento do array Deliveries exibir o Marker (com o icone de package.svg)
+            na posição definida no objeto delivery. Quando clicado no marcador,
+            aparece um Popup com os dados da entrega */}
         {deliveries.map((delivery) => (
           <Marker
             key={delivery.id}

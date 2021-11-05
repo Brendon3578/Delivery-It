@@ -1,11 +1,10 @@
-# 📦 Delivery.it
+# 🚚 Delivery.it
 
 <p align="center">
-    <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="#-como-executar">Como executar</a>&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#-projeto">Projeto</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="#-layout">Layout</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="#-features-extras">Features extras</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#-instalação">Instalação</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#-features">Features</a>&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#-licença">Licença</a>
 </p>
 
@@ -15,11 +14,11 @@
 
 <p align="center">
     <kbd>
-        <img src=".github/cover.png" width="550" style="border-radius: 5px" alt="Desktop page">
+        <img src=".github/cover.png" width="550" style="border-radius: 5px" alt="Main App">
     </kbd>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <kbd>
-        <img src=".github/cover-2.png" width='200' style="border-radius: 5px" alt="Mobile page">
+        <img src=".github/cover-2.png" width='200' style="border-radius: 5px" alt="Delivery Popup Example">
     </kbd>
 </p>
 
@@ -29,9 +28,7 @@
 
 ## 💻 Projeto
 
-O Delivery.it é um pequeno projeto para a gestão de entregas de encomendas, com a inserção do endereço e da data da entrega
-
-- [Acesse o projeto](https://delivery-it.herokuapp.com/)
+O Delivery.it é uma pequena aplicação para a gestão de entregas de encomendas e produtos, a partir da inserção do endereço e da data da entrega, [Acesse o app clicando aqui](https://delivery-it.herokuapp.com/)
 
 ## 🛠 Tecnologias
 
@@ -45,14 +42,13 @@ Bibliotecas
 - [React Leaflet](https://react-leaflet.js.org//)
 - [React Select](https://react-select.com/home)
 - [React Datetime](https://github.com/arqex/react-datetime)
-- [React Icons](https://react-icons.github.io/react-icons/)
 - [Axios](https://github.com/axios/axios)
 
 Utilitários
 
 - [Google Fonts](https://fonts.google.com/)
 
-## 🚀 Como executar
+## 🚀 Instalação
 
 ```bash
 
@@ -70,9 +66,9 @@ Utilitários
 
 ```
 
-Lembrando que será necessário criar uma conta gratuita no [Mapbox 🗺️](https://www.mapbox.com/) para criar o token de acesso, necessário para se ter acesso à API de Geolocalização.
+Lembrando que será necessário criar uma conta gratuita no [Mapbox 🗺️](https://www.mapbox.com/) para criar o **token de acesso**, necessário para se ter acesso à API de Geolocalização.
 
-:arrow_right: Depois de ter uma conta do Mapbox, cole a seguinte variável ambiente em um arquivo .env criado na pasta root do projeto, e insira o token de acesso nesse arquivo:
+Depois de ter uma conta do Mapbox, cole a seguinte variável ambiente em um arquivo `.env` criado na pasta **root** do projeto, e insira o token de acesso nesse arquivo:
 
 ```bash
 REACT_APP_ACCESS_TOKEN_MAP_BOX='insira_o_access_token_do_mapbox_aqui'
@@ -80,9 +76,9 @@ REACT_APP_ACCESS_TOKEN_MAP_BOX='insira_o_access_token_do_mapbox_aqui'
 
 ## ☕ Features
 
-- :earth_americas: Seleção assíncrona de Eendereços com a utilização do React-Select
+- :earth_americas: Seleção assíncrona de Endereços com a utilização do React-Select
 - :calendar: Manipulação de Datas no react atráves do React-Datetime
-- :world_map: React Leaflet para o inserimento do mapa dentro do React
+- :world_map: React Leaflet para o inserimento de mapa no React
 
 ## 📝 Licença
 

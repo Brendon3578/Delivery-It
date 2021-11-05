@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-
 import Leaflet from "leaflet";
 import { Marker, TileLayer, MapContainer, ZoomControl } from "react-leaflet";
 
@@ -36,6 +35,8 @@ export function LeafletMap ({children, location, position}: LeafletMapType) {
         url={`https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${ACCESS_TOKEN_MAP_BOX}`}
       />
 
+      {/* Exibir o marcador da posição que o usuário escolheu no input do endereço,
+          ele sai da tela assim que o usuário clica em confirmar do formulário */}
       {position && (
         <Marker
           icon={mapPinIcon}
@@ -43,7 +44,10 @@ export function LeafletMap ({children, location, position}: LeafletMapType) {
         />
       )}
 
+      {/* children que será o map do array Deliveries, pra cada delivery,
+          terá um marker correspondente */}
       {children}
+
     </MapContainer>
   );
 }

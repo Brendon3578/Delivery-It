@@ -195,6 +195,10 @@ form.landing-page-form {
 
   &.hidden {
     left: -400px;
+
+    .toggle-sidebar-button svg {
+      transform: rotate(360deg);
+    }
   }
 
   .toggle-sidebar-button {
@@ -218,6 +222,7 @@ form.landing-page-form {
 
     svg {
       transform: rotate(180deg);
+      transition: transform 0.7s ease;
     }
 
     &:hover {
