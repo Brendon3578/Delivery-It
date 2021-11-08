@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-    <img alt="License" src="https://img.shields.io/badge/license-MIT-green">
+    <img alt="License" src=https://img.shields.io/badge/license-MIT-%2300c4b4">
 </p>
 
 <p align="center">
